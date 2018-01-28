@@ -3,6 +3,7 @@ import newspaper
 from newspaper import Article
 
 class edits():
+#Keeping these variables in case I need them later. Don't need to look up the code.
 #   PURPLE = '\033[95m'
 #   CYAN = '\033[96m'
 #   DARKCYAN = '\033[36m'
@@ -13,6 +14,8 @@ class edits():
    BOLD = '\033[1m'
    UNDERLINE = '\033[4m'
    END = '\033[0m'
+
+#Keeping this class to work on later. Give each article an identity with functions to follow.
 
 #class article_edits(self):
 #    def check(self):
@@ -25,21 +28,20 @@ def article_details(url):
     print(edits.BOLD + 'Title: ' + edits.END, article.title)
     print(edits.BOLD + 'Author: ' + edits.END, article.authors)
     print(edits.BOLD + 'Date: ' + edits.END, article.publish_date);
-    #publication = article.source_url.split('.')
-    #print(edits.BOLD + 'Publication: ' + edits.END, publication[1].upper())
-    #print(article.keywords)
 
 def url_grab(url):
     r = requests.get(url)
     print(r.status_code)
     print(r.text)
 
-#This is my temp fix for getting names of publications. 
-#Newspaper package is better for this, so will adjust after learning how to use it. 
+#Following function is for getting the publication's name simply. 
+# Will need to format string to tidy up the result.
+
 def find_names(url):
     new_url = url.split('.')
-    new_url = new_url[1]
-    print(edits.BOLD + 'Article by: ' + edits.END + new_url.upper())
+    print(edits.BOLD + 'Article by: ' + edits.END + new_url[1].upper())
+
+#This is my temp fix for getting names of publications.  
 
     # if 'cnn' in url:
     #     print(edits.BOLD + 'Article by:' + edits.END, 'CNN')
