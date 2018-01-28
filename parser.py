@@ -14,6 +14,11 @@ class color():
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
+#class article_edits(self):
+#    def check(self):
+#        if article.
+
+
 def article_details(url):
     article = Article(url)
     article.download()
@@ -22,7 +27,7 @@ def article_details(url):
     print(color.BOLD + 'Author: ' + color.END, article.authors)
     print(color.BOLD + 'Date: ' + color.END, article.publish_date)
     publication = article.source_url.split('.')
-    print(color.BLUE + color.BOLD + 'Publication: ' + color.END, publication[1].capitalize())
+    print(color.BOLD + 'Publication: ' + color.END, publication[1].upper())
     #print(article.keywords)
     
 
@@ -36,34 +41,36 @@ def url_grab(url):
 #Newspaper package is better for this, so will adjust after learning how to use it. 
 def find_names(url):
     if 'cnn' in url:
-        print('Article by: CNN')
+        print(color.BOLD + 'Article by:' + color.END, 'CNN')
     elif 'qz' in url:
-        print('Article by: Quartz')
+        print(color.BOLD + 'Article by:' + color.END, 'Quartz')
     elif 'wsj' in url:
-        print('Article by: Wall Street Journal')
+        print(color.BOLD + 'Article by:' + color.END, 'The Wall Street Journal')
     elif 'fivethirtyeight' in url:
-        print('Article by: Five Thirty Eight')
+        print(color.BOLD + 'Article by:' + color.END, 'Five Thirty Eight')
     elif 'nytimes' in url:
-        print('Article by: New York Times')
+        print(color.BOLD + 'Article by:' + color.END, 'The New York Times')
     elif 'bloomberg' in url:
-        print('Article by: Bloomberg')
+        print(color.BOLD + 'Article by:' + color.END, 'Bloomberg')
     elif 'cnbc' in url:
-        print('Article by: CNBC')
+        print(color.BOLD + 'Article by:' + color.END, 'CNBC')
     elif 'theguardian' in url:
-        print('Article by: The Guardian')
+        print(color.BOLD + 'Article by:' + color.END, 'The Guardian')
     elif 'huffingtonpost' in url:
-        print('Article by: The Huffington Post')
+        print(color.BOLD + 'Article by:' + color.END, 'The Huffington Post')
     elif 'themarshallproject' in url:
-        print('Article by: The Marshall Project')
+        print(color.BOLD + 'Article by:' + color.END, 'The Marshall Project')
     elif 'seattletimes' in url:
-        print('Article by: The Seattle Times')
+        print(color.BOLD + 'Article by:' + color.END, 'The Seattle Times')
     else:
-        print('Article publication not recognized')
+        print(color.BOLD + 'Article publication not recognized')
 
 def main():
 
-    #find_names('https://www.wsj.com/articles/trump-takes-to-twitter-like-clockwork-1516357800')
-    #url_grab('https://www.cnbc.com/2017/05/05/teslas-valuation-raises-grim-reminders-of-the-dotcom-bubble.html')
-    article_details('https://www.cnbc.com/2017/05/05/teslas-valuation-raises-grim-reminders-of-the-dotcom-bubble.html')
+    url_input = input("Please enter article URL: ")
+
+    find_names(url_input)
+    #url_grab(url_input)
+    article_details(url_input)
 
 if __name__ == '__main__': main()
