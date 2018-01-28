@@ -63,7 +63,7 @@ def find_names(url):
     elif 'seattletimes' in url:
         print(color.BOLD + 'Article by:' + color.END, 'The Seattle Times')
     else:
-        print(color.BOLD + 'Article publication not recognized')
+        print('Article publication not recognized')
 
 def main():
 
