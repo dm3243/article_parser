@@ -27,7 +27,7 @@ def article_details(url):
     print(color.BOLD + 'Author: ' + color.END, article.authors)
     print(color.BOLD + 'Date: ' + color.END, article.publish_date)
     publication = article.source_url.split('.')
-    print(color.BOLD + 'Publication: ' + color.END, publication[1].upper())
+    #print(color.BOLD + 'Publication: ' + color.END, publication[1].upper())
     #print(article.keywords)
     
 
