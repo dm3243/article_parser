@@ -17,9 +17,26 @@ class edits():
 
 #Keeping this class to work on later. Give each article an identity with functions to follow.
 
-#class article_edits(self):
+# class article_edits(edits):
+
+#     url = input("Please enter article URL: ")
+    
+#     def article_details(self, url):
+#         article = Article(url)
+#         article.download()
+#         article.parse()
+#         print(edits.BOLD + 'Title: ' + edits.END, article.title)
+#         print(edits.BOLD + 'Author: ' + edits.END, article.authors)
+#         print(edits.BOLD + 'Date: ' + edits.END, article.publish_date)
+
+#     def find_names(self, url):
+#         new_url = url.split('.')
+#         print(edits.BOLD + 'Article by: ' + edits.END + new_url[1].upper())
+
 #    def check(self):
 #        if article.
+
+#Will uncomment this bit later if the class article_edits above doesn't work
 
 def article_details(url):
     article = Article(url)
@@ -29,10 +46,10 @@ def article_details(url):
     print(edits.BOLD + 'Author: ' + edits.END, article.authors)
     print(edits.BOLD + 'Date: ' + edits.END, article.publish_date);
 
-def url_grab(url):
-    r = requests.get(url)
-    print(r.status_code)
-    print(r.text)
+# def url_grab(url):
+#     r = requests.get(url)
+#     print(r.status_code)
+#     print(r.text)
 
 #Following function is for getting the publication's name simply. 
 # Will need to format string to tidy up the result.
@@ -69,6 +86,8 @@ def find_names(url):
     #     print('Article publication not recognized')
 
 def main():
+
+    #print(article_edits())
 
     url_input = input("Please enter article URL: ")
 
