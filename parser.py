@@ -3,21 +3,12 @@ import newspaper
 from newspaper import Article
 
 class Edits():
-#Keeping these variables in case I need them later. Don't need to look up the code.
-#   PURPLE = '\033[95m'
-#   CYAN = '\033[96m'
-#   DARKCYAN = '\033[36m'
-#   BLUE = '\033[94m'
-#   GREEN = '\033[92m'
-#   YELLOW = '\033[93m'
-#   RED = '\033[91m'
    BOLD = '\033[1m'
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-#Keeping this class to work on later. Give each article an identity with functions to follow.
-
 # class Article_Edits(Edits):
+#     def__init__(self,...)
 
 #     url = input("Please enter article URL: ")
     
