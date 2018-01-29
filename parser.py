@@ -28,7 +28,6 @@ class Edits():
 #        if article.
 
 
-
 def article_details(url):
     article = Article(url)
     article.download()
