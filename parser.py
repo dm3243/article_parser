@@ -27,7 +27,7 @@ class Edits():
 #    def check(self):
 #        if article.
 
-#Will uncomment this bit later if the class article_Edits above doesn't work
+
 
 def article_details(url):
     article = Article(url)
