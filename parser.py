@@ -2,7 +2,7 @@ import requests
 import newspaper
 from newspaper import Article
 
-class edits():
+class Edits():
 #Keeping these variables in case I need them later. Don't need to look up the code.
 #   PURPLE = '\033[95m'
 #   CYAN = '\033[96m'
@@ -17,7 +17,7 @@ class edits():
 
 #Keeping this class to work on later. Give each article an identity with functions to follow.
 
-# class article_edits(edits):
+# class Article_Edits(Edits):
 
 #     url = input("Please enter article URL: ")
     
@@ -25,26 +25,26 @@ class edits():
 #         article = Article(url)
 #         article.download()
 #         article.parse()
-#         print(edits.BOLD + 'Title: ' + edits.END, article.title)
-#         print(edits.BOLD + 'Author: ' + edits.END, article.authors)
-#         print(edits.BOLD + 'Date: ' + edits.END, article.publish_date)
+#         print(Edits.BOLD + 'Title: ' + Edits.END, article.title)
+#         print(Edits.BOLD + 'Author: ' + Edits.END, article.authors)
+#         print(Edits.BOLD + 'Date: ' + Edits.END, article.publish_date)
 
 #     def find_names(self, url):
 #         new_url = url.split('.')
-#         print(edits.BOLD + 'Article by: ' + edits.END + new_url[1].upper())
+#         print(Edits.BOLD + 'Article by: ' + Edits.END + new_url[1].upper())
 
 #    def check(self):
 #        if article.
 
-#Will uncomment this bit later if the class article_edits above doesn't work
+#Will uncomment this bit later if the class article_Edits above doesn't work
 
 def article_details(url):
     article = Article(url)
     article.download()
     article.parse()
-    print(edits.BOLD + 'Title: ' + edits.END, article.title)
-    print(edits.BOLD + 'Author: ' + edits.END, article.authors)
-    print(edits.BOLD + 'Date: ' + edits.END, article.publish_date);
+    print(Edits.BOLD + 'Title: ' + Edits.END, article.title)
+    print(Edits.BOLD + 'Author: ' + Edits.END, article.authors)
+    print(Edits.BOLD + 'Date: ' + Edits.END, article.publish_date);
 
 # def url_grab(url):
 #     r = requests.get(url)
@@ -56,38 +56,38 @@ def article_details(url):
 
 def find_names(url):
     new_url = url.split('.')
-    print(edits.BOLD + 'Article by: ' + edits.END + new_url[1].upper())
+    print(Edits.BOLD + 'Article by: ' + Edits.END + new_url[1].upper())
 
 #This is my temp fix for getting names of publications.  
 
     # if 'cnn' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'CNN')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'CNN')
     # elif 'qz' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'Quartz')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'Quartz')
     # elif 'wsj' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The Wall Street Journal')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The Wall Street Journal')
     # elif 'fivethirtyeight' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'Five Thirty Eight')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'Five Thirty Eight')
     # elif 'nytimes' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The New York Times')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The New York Times')
     # elif 'bloomberg' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'Bloomberg')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'Bloomberg')
     # elif 'cnbc' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'CNBC')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'CNBC')
     # elif 'theguardian' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The Guardian')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The Guardian')
     # elif 'huffingtonpost' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The Huffington Post')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The Huffington Post')
     # elif 'themarshallproject' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The Marshall Project')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The Marshall Project')
     # elif 'seattletimes' in url:
-    #     print(edits.BOLD + 'Article by:' + edits.END, 'The Seattle Times')
+    #     print(Edits.BOLD + 'Article by:' + Edits.END, 'The Seattle Times')
     # else:
     #     print('Article publication not recognized')
 
 def main():
 
-    #print(article_edits())
+    #print(article_Edits())
 
     url_input = input("Please enter article URL: ")
 
